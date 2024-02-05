@@ -4,9 +4,10 @@
 import './App.css';
 import Search from './components/search'
 import CurrentWeather from './components/current_weather'
-import {weatherApi, weatherApiKeys} from './components/api'
+import {weatherApi} from './components/api'
 import React, {useState} from 'react';
 import Forecast from './components/forecast/forecast'
+
 
 
 
@@ -18,6 +19,8 @@ function App() {
 
   const handleSearchChange=(searchData) =>{
     const [lat, lon]= searchData.value.split(" ")
+    // include your api key in the below const which you get from the api provider.
+    const weatherApiKeys= process.env.REACT_APP_API_KEY;
 
     const currentWeather= fetch(
       `${weatherApi}/weather?lat=${lat}&lon=${lon}&appid=${weatherApiKeys}&units=metric`    )
