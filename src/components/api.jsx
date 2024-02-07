@@ -10,3 +10,4 @@ export const geoApiUrl = "https://wft-geo-db.p.rapidapi.com/v1/geo";
 
 export const weatherApi = "https://api.openweathermap.org/data/2.5";
 
+// you can create const here and export the api key from here just line the weatherApi link
